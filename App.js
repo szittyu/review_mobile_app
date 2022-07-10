@@ -9,8 +9,8 @@ export default function App() {
   // const [fontsLoaded, setFontsLoaded] = useState(false);
 
   const [fontsLoaded] = useFonts({
-    'Nunito-Regular': require('./assets/fonts/Nunito-Regular.ttf'),
-    'Nunito-Bold': require('./assets/fonts/Nunito-Bold.ttf'),
+    'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
+    'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
   });
 
   if (!fontsLoaded) {
