@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './screen/home';
 import About from './screen/about';
-import ReviewDetails from './screen/reviewDetails';
+import Review from './screen/reviewDetails';
 
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
@@ -27,9 +27,13 @@ export default function App() {
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="About" component={About} />
-          <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+          <Stack.Group
+            screenOptions={{ headerStyle: { backgroundColor: '#eee' } }}
+          >
+            <Stack.Screen name="Home" component={Home} options={{ title: 'GameZone' }} />
+            <Stack.Screen name="About" component={About} />
+            <Stack.Screen name="Review" component={Review} options={{ title: 'Review Details' }} />
+          </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer>
     );
